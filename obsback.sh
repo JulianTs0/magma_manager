@@ -190,12 +190,19 @@ do
 					then
 						kill -9 $fpid
 					fi
+          
+          main_user=`echo ${data_backup[3]} | cut -d "/" -f3`
+
 
 					if test $opt_backup == "1"
 					then
+            rm -r ${data_backup[4]} && mkdir ${data_backup[4]}
 						cp -r ${data_backup[3]} ${data_backup[6]}
+            chown -R $main_user:$main_user ${data_backup[4]}
 					else
+            rm -r ${data_backup[3]} && mkdir ${data_backup[3]} 
 						cp -r ${data_backup[4]} ${data_backup[5]}
+            chown -R $main_user:$main_user ${data_backup[3]}
 					fi
 
 					echo -e "SUCCESS\n"
