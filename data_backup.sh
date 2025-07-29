@@ -1,5 +1,5 @@
-LOCAL_VAULT_PATH="/home/julian/CarpetaCentral/Conocimiento"
-USB_BACKUP_PATH="/media/julian/BACKUP/Conocimiento"
+LOCAL_VAULT_PATH="/home/mi_usuario/mi_boveda"
+USB_BACKUP_PATH="/media/mi_usuario/mi_usb/mi_boveda"
 OBSIDIAN_PROCESS_NAME="obsidian"
 GDRIVE_REMOTE_NAME="gdrive"
-GDRIVE_BACKUP_PATH="Obsidian/Conocimiento"
+GDRIVE_BACKUP_PATH="Backups/mi_boveda"
