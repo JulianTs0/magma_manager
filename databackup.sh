@@ -1,9 +1,0 @@
-obs_path=""
-back_id=""
-back_name=""
-local_vault_child=""
-back_path_child=""
-local_vault_father="$local_vault_child/.."
-back_path_father="$back_path_child/.."
-back_mount_path="$back_path_father/.."
-data=($obs_path $back_id $back_name $local_vault_child $back_path_child $local_vault_father $back_path_father $back_mount_path);echo ${data[@]}

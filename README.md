@@ -1,4 +1,4 @@
-### Obsidian backup  
+# Obsidian backup  
 
 Basicamente este es un shellscript que permite hacer una copia de respaldo de una boveda de obsidian  
 en una memoria extraible USB. Tambien permite actualizar la boveda local con la informacion del USB.  
@@ -6,13 +6,28 @@ Este script es una pequeña muestra de los conocimientos en linux aprendidos tan
 en la catedra de Sistemas Operativos (SOP) como tambien los conocimientos aprendidos autodidactamente  
 aplicados a un script que uso para hacer una copia de seguridad en un USB.  
 
-El ejecutable obsback usa los datos almacenados en databackup el cual debe ser modificado con los siguientes campos  
+El ejecutable mm (magma manager) usa los datos almacenados en data backup, que tiene que estar en el mismo 
+directorio, el cual debe ser modificado con los siguientes campos:  
 
-obs path -> La direccion de donde se ejecuta obsidian, esto se puede observar con el comando ps pero generalmente se  
-encuentra en /app/obsidian  
-back id -> Aca va la id que identifica a la memoria extraible  
-back name -> Este es el nombre de la memoria extraible  
-local vault child -> Aca va la direccion de la carpeta local de la boveda de obsidian, la direccion debe incluir  
-el nombre de la boveda  
-back path child -> Y por ultimo aca va la direccion de la carpeta de la boveda pero en la memoria extraible, la  
-direccion debe incluir el nombre de la boveda
+* NO uses comillas dentro de las comillas si tus rutas tienen espacios.
+
+### Ruta completa a tu bóveda local de Obsidian.
+LOCAL_VAULT_PATH="/home/mi_usuario/mi_boveda"
+
+### Ruta completa al directorio en tu USB donde se guardará el backup.
+#### El script NO montará el USB, debe estar ya montado.
+USB_BACKUP_PATH="/media/mi_usuario/mi_usb/mi_boveda"
+
+### Nombre del proceso de Obsidian para poder cerrarlo.
+#### Suele ser "obsidian".
+OBSIDIAN_PROCESS_NAME="obsidian"
+
+# --- Configuración de Google Drive (Opcional) ---
+
+### Nombre del "remote" que configuraste en rclone para Google Drive.
+#### Lo obtienes de `rclone listremotes`.
+GDRIVE_REMOTE_NAME="gdrive"
+
+### Ruta dentro de Google Drive donde quieres guardar el backup.
+#### Rclone la creará si no existe.
+GDRIVE_BACKUP_PATH="Backups/mi_boveda"

@@ -1,0 +1,5 @@
+LOCAL_VAULT_PATH="/home/julian/CarpetaCentral/Conocimiento"
+USB_BACKUP_PATH="/media/julian/BACKUP/Conocimiento"
+OBSIDIAN_PROCESS_NAME="obsidian"
+GDRIVE_REMOTE_NAME="gdrive"
+GDRIVE_BACKUP_PATH="Obsidian/Conocimiento"
