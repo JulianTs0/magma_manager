@@ -22,7 +22,7 @@ USB_BACKUP_PATH="/media/mi_usuario/mi_usb/mi_boveda"
 #### Suele ser "obsidian".
 OBSIDIAN_PROCESS_NAME="obsidian"
 
-# --- Configuración de Google Drive (Opcional) ---
+### --- Configuración de Google Drive (Opcional) ---
 
 ### Nombre del "remote" que configuraste en rclone para Google Drive.
 #### Lo obtienes de `rclone listremotes`.
